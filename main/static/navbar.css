@@ -73,3 +73,13 @@ body {
     background-color: #f3f5f7;
   }
 }
+
+#header{
+	font-size: 32px;
+	line-height: 8px;
+}
+
+#pic{
+	height: 100%;
+	width: 100%;
+}
