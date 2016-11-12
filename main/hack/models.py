@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 class Wisdom(models.Model):
     title = models.CharField(max_length=50)
@@ -7,8 +6,8 @@ class Wisdom(models.Model):
     latitude = models.DecimalField(max_digits=10,decimal_places=7)
     start = models.DateTimeField()
     end = models.DateTimeField()
-    rates = models.IntegerField(default=0)
-    rating = models.DecimalField(max_digits=4,decimal_places=1)
+    rates = 0
+    rating = 0
     categories = []
     """ Include User """
     comment_list = []

@@ -5,6 +5,10 @@
     <title>G Thang</title>
   </head>
   <body>
-    It feels good to be a gangster
+    <form action="/form/" method="post">
+      {% csrf_token %}
+      {{ form }}
+      <input type="submit" value="Submit" />
+    </form>
   </body>
 </html>
