@@ -18,6 +18,7 @@ TODO
   - install all necessary frameworks
   - create color scheme
   - define global and local variables for reuse
+- create static files for each application
 
 Resources
 -----------
@@ -30,3 +31,7 @@ Here are some important links for brushing up on or referencing different techno
 - <a href = "http://lesscss.org">LESS</a> (CSS Extension)
 - <a href= "http://api.jquery.com">JQuery</a>
 - <a href = "http://www.w3schools.com">General Web Development</a> (you can learn pretty much anything client side here)
+
+Structure
+-----------
+The main application is within the folder "main". Here, you should find another folder named main. this is the location of the code of the main application. In the root directory, there are two other apps, hack and login, which are the hack creation and login applications, respectively. Within the folder for each app, there is a templates folder. This is where all the static files go.
