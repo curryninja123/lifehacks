@@ -9,7 +9,6 @@ Life Hacks is a project for a community to create and receive life hacks based o
 TODO
 ------------
 - basically everything lmao
-- create Django application framework
 - create website structure
   - home page
   - login page
