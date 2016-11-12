@@ -23,6 +23,8 @@ TODO
 Resources
 -----------
 Here are some important links for brushing up on or referencing different technologies.
+- <a href = "http://rogerdudler.github.io/git-guide/">Basic Git</a>
+- <a href = "http://gitref.org">More Complete Git Reference</a>
 - <a href = "https://docs.djangoproject.com/en/1.10/">Django</a>
 - <a href = "https://docs.djangoproject.com/en/1.10/">Bootstrap</a>
 - <a href = "https://docs.djangoproject.com/en/1.7/topics/templates/">DTL</a>
