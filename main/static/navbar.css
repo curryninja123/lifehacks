@@ -9,6 +9,7 @@ body {
 }
 .navbar-default .navbar-brand {
   color: #525556;
+  font-size: 35px;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
