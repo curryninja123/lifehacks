@@ -11,3 +11,6 @@ class Member(models.Model):
 
     def __str__(self):
         return self.user.get_username()
+
+    def matches(self, usr, pwd):
+        return self.user.username == usr and self.user.password == pwd

@@ -6,8 +6,8 @@ app_name = 'login'
 urlpatterns = [
     url(r'^create/$', views.signup_view, name='create'),
     url(r'^new-user/', views.create_user, name='new_user'),
-    url(r'^$', views.login_view, name='login'),
+    url(r'^$', views.login_view, name='login_view'),
+    url(r'^log/', views.login_user, name='login'),
     url(r'^new-login/', views.signup_view, name='signup'),
     url(r'^create/', views.create_user, name='create'),
-    url(r'^$', views.login_view, name='index'),
 ]
