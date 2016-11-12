@@ -1,3 +1,10 @@
+.vcenter
+{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 body
 {
 	font-family: 'Helvetica';
@@ -45,6 +52,8 @@ h4
 {
 	border-bottom: thin solid black;
 }
+<<<<<<< HEAD
+=======
 
 table
 {
@@ -69,3 +78,4 @@ table
 
 
 
+>>>>>>> 4f181c7847f710e95dd14901a73cdf380d4f55b7

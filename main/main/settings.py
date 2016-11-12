@@ -26,8 +26,6 @@ SECRET_KEY = '2c=2ageo(kka73$^-8x4a7h^k6-yxja^7_k@w@dj4yl_-1u@4y'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -68,6 +66,10 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
 ]
 
 WSGI_APPLICATION = 'main.wsgi.application'

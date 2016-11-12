@@ -24,6 +24,11 @@
 				<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
 			</div>
 		</div>
+<<<<<<< HEAD
+	</body>
+</html>
+=======
 	</div>
 </div>
 {% endblock %}
+>>>>>>> 4f181c7847f710e95dd14901a73cdf380d4f55b7
