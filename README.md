@@ -37,4 +37,4 @@ Here are some important links for brushing up on or referencing different techno
 
 Structure
 -----------
-The main application is within the folder "main". Here, you should find another folder named main. this is the location of the code of the main application. In the root directory, there are two other apps, hack and login, which are the hack creation and login applications, respectively. Within the folder for each app, there is a templates folder. This is where all the static files go.
+The main application is within the folder "main". Here, you should find another folder named main. this is the location of the code of the main application. In the main directory, there are two other apps, hack and login, which are the hack creation and login applications, respectively. Within the folder for each app, there is a templates folder. This is where all the static files go.
