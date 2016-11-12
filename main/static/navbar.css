@@ -83,3 +83,19 @@ body {
 	height: 100%;
 	width: 100%;
 }
+
+#up{
+  color:white;
+  font-weight:bold;
+  background-color: mediumspringgreen;
+  height: 35px;
+  width: 35px;
+}
+
+#down{
+  color:white;
+  font-weight:bold;
+  background-color: tomato;
+  height: 35px;
+  width: 35px;
+}
