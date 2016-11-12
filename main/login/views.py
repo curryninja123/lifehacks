@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.db import IntegrityError
+from django.contrib.auth import authenticate, login
+from django.http import Http404
 from . import models
 # Create your views here.
 def login_view(request):
@@ -41,3 +43,14 @@ def create_user(request):
     member.hometown = p.get('hometown', '')
     member.profile_pic = p.get('profile_pic', None)
     return render(request, 'pages/success.html', {'success_message':'created an account!'})
+
+def login_user(request):
+    p = request.POST
+    username = p.get('username', '')
+    password = p.get('password', '')
+    user = authenticate(username=username, password=password)
+    if user is not None:
+        login(request, user)
+        return render(request, 'pages/success.html', {'success_message':'logged in, ' +username+'!'}) # change later
+    else:
+        return render(request, 'pages/login.html', {'error_message': 'Incorrect username or password.'})
