@@ -1,0 +1,14 @@
+{% extends 'pages/base.html' %}
+{% block title %}Hack Creator{% end block %}
+{% block body %}
+<div class="container-fluid">
+  <form action="{% url hack:create_hack %}">
+    <label>Title</label><input type="text" class="form-control" name="title" />
+    <label>Text</label><textarea class="form-control" name="text"></textarea>
+    <label>Latitude</label><input type="number" class="form-control" name="latitude"/>
+    <label>Longitude</label><input type="number" class="form-control" name="longitude"/>
+    <label>Picture</label><input type="image" class="form-control" name="picture" />
+    <input type="submit" value = "Submit"/>
+  </form>
+</div>
+{% endblock %}

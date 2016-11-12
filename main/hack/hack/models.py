@@ -4,6 +4,8 @@ class Wisdom(models.Model):
     title = models.CharField(max_length=50)
     longitude = models.DecimalField(max_digits=10,decimal_places=7)
     latitude = models.DecimalField(max_digits=10,decimal_places=7)
+    start = models.DateTimeField()
+    end = models.DateTimeField()
     rates = 0
     rating = 0
     categories = []
@@ -18,8 +20,6 @@ class Wisdom(models.Model):
 
 class Tip(Wisdom):
     text = models.CharField(max_length=150)
-    start = models.DateTimeField(auto_now=True)
-    end = models.DateTimeField(auto_now=True)
 
 class Hack(Wisdom):
     text = models.TextField()
