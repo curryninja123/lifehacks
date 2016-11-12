@@ -6,5 +6,3 @@ def index(request):
 
 def add_comment(wisdom, comment):
     wisdom.comment_list.append(comment)
-
-def 
