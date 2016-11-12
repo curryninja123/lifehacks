@@ -2,12 +2,13 @@
 {% block title %}Hack Creator{% endblock %}
 {% block body_block %}
 <div class="container-fluid">
-  <form action="{% url 'hack:new_hack' %}">
+  <form action="{% url 'hack:new_tip' %}">
     <label>Title</label><input type="text" class="form-control" name="title" />
-    <label>Text</label><textarea class="form-control" name="text"></textarea>
+    <label>Text</label><input type="text" class="form-control" name="text" />
     <label>Latitude</label><input type="number" class="form-control" name="latitude"/>
     <label>Longitude</label><input type="number" class="form-control" name="longitude"/>
-    <label>Picture</label><input type="image" class="form-control" name="picture" />
+    <label>Start Time</label><input type="datetime" class="form-control" name="start" />
+    <label>End Time</label><input type="datetime" class="form-control" name="end" />
     <input type="submit" value = "Submit"/>
   </form>
 </div>

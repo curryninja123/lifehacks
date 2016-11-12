@@ -14,7 +14,7 @@ def display(request, wisdom_id):
     return render(request, 'pages/display.html', context)
 
 def new_hack(request):
-    return
+    return render(request, 'pages/createHack.html')
 
 def new_tip(request):
-    p = request.POST
+    return render(request, 'pages/createTip.html')
