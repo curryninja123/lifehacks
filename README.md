@@ -19,7 +19,6 @@ TODO
   - define global and local variables for reuse
 - create static files for each application
 - create data models
-  - main
   - login
   - hack
 
