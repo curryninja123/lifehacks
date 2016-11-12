@@ -12,6 +12,3 @@ def create_user(usr, name, mail, pwd, town, pic):
     u = User(username=usr, email=mail, password=pwd, first_name=name[0], last_name=name[1])
     member = Member(user=u, hometown=town, profile_pic=pic)
     member.save()
-
-def edit_user(user):
-    return
