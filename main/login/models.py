@@ -11,3 +11,6 @@ class User(models.Model):
     profile_pic = models.ImageField()
     password = forms.CharField(widget=forms.PasswordInput())
     radius = 0.5
+
+    def __str__(self):
+        return self.username
