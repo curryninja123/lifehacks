@@ -8,7 +8,6 @@ Life Hacks is a project for a community to create and receive life hacks based o
 
 TODO
 ------------
-- basically everything lmao
 - create website structure
   - home page
   - login page
@@ -19,6 +18,10 @@ TODO
   - create color scheme
   - define global and local variables for reuse
 - create static files for each application
+- create data models
+  - main
+  - login
+  - hack
 
 Resources
 -----------
