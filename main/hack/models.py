@@ -16,6 +16,9 @@ class Wisdom(models.Model):
     def __str__ (self):
         return self.title
 
+    def add_comment(self, comment):
+        self.comment_list.append(comment)
+
 class Tip(Wisdom):
     text = models.CharField(max_length=150)
 

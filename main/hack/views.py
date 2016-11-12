@@ -1,8 +1,13 @@
 from django.shortcuts import render
-from . import models
+from .models import *
 # Create your views here.
 def index(request):
     return render(request, 'pages/create.html')
 
-def add_comment(wisdom, comment):
-    wisdom.comment_list.append(comment)
+def display(request, wisdom_id):
+    w = Wisdom.objects.get(pk=wisdom_id)
+    context = {
+        'wisdom': w,
+        'hack': isinstance(w, Hack),
+    }
+    return render(request, 'pages/display.html', context)
