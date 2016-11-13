@@ -5,7 +5,11 @@ from hack.models import *
 
 # Create your views here.
 def index(request):
-    return render(request, 'pages/index.html')
+    context = {
+        'hack_list': Hack.objects.all(),
+        'tip_list': Tip.objects.all(),
+    }
+    return render(request, 'pages/index.html', context)
 
 def home(request):
     return render(request, 'pages/home.html')

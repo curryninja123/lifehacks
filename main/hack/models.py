@@ -8,9 +8,6 @@ class Tip (models.Model):
     end = models.DateTimeField(max_length=50)
     latitude = models.DecimalField(max_digits=8, decimal_places=5)
     longitude = models.DecimalField(max_digits=8, decimal_places=5)
-    rates = 0
-    rating = 0
-    comments = []
     categories = []
 
 class Hack(models.Model):

@@ -37,9 +37,18 @@
 
 .hackDisp {
 	width: 80%;
-	background-color: rgb(57, 76, 210);
-	opacity: 0.7;
-	color: #efefef;
+	background-color: rgba(57, 76, 210,0.7);
+	color: #fafafa;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.tipDisp {
+	width: 80%;
+	background-color:rgba(79, 21, 203, 0.7);
+	color: #fafafa;
+	border-radius: 10px;
+	padding: 10px;
 }
 /*-------------------------------------------------------------------*/
 /* for login.html */
