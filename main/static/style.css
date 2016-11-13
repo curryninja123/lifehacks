@@ -1,0 +1,56 @@
+/* for index.html ---------------------------------------------------*/
+#header{
+	font-size: 32px;
+	line-height: 8px;
+}
+
+#pic{
+	height: 100%;
+	width: 100%;
+}
+
+#up{
+  color:white;
+  font-weight:bold;
+  background-color: mediumspringgreen;
+  height: 35px;
+  width: 35px;
+  border-width: 0;
+}
+
+#down{
+  color:white;
+  font-weight:bold;
+  background-color: tomato;
+  height: 35px;
+  width: 35px;
+  border-width: 0;
+}
+
+#titlebtn{
+  border-width: 0;
+  color:black;
+  background-color: transparent;
+  font-size:32px;
+  padding:0;
+}
+/*-------------------------------------------------------------------*/
+/* for login.html */
+#title{
+	font-size: 32px;
+}
+
+#buttons{
+	padding-right: 15px;
+	width: 200px;
+}
+
+
+
+
+
+
+
+
+
+/**/

@@ -4,30 +4,6 @@
 {% block imports %}<link rel="stylesheet" href = "../stylesheets/style.css">{% endblock %}
 {% block body_block %}
 <body>
-  <style>
-    .titleblock {
-      color: #f7f7f7;
-      background-color: rgb(83, 59, 231);
-      font-size: 20px;
-      font-weight: bold;
-      border-style: solid;
-      border-color: rgb(73, 49, 221);
-      border-width: medium;
-      text-align: center;
-    }
-    .enterbutton {
-      width: 100px;
-      color: #f7f7f7;
-      background-color: rgb(83, 59, 231);
-    }
-    .contain {
-      border-style: solid;
-      padding: 50px;
-      padding-top: 20px;
-      border-width: medium;
-      border-color: rgb(83, 59, 231);
-    }
-  </style>
   <div class = "container-fluid">
     <br />
     {% if error_message %}
@@ -42,24 +18,24 @@
         </div>
         <div class="col-md-6 contain">
           <div>
-            <p class="titleblock">
+            <p class="titleblock" id="title">
               Login
             </p>
           </div>
           <label>User Name</label><input type="text" class="form-control" name="username"/><br />
           <label>Password</label><input type="password" class="form-control" name="password" /><br />
-          <div class="row" align="center">
-            <div class="col-md-1">
+            <div class="row" align="center" id="buttons">
+              <div class="col-md-1">
+              </div>
+              <div class="col-md-4">
+                <input type="submit" class="btn btn-primary enterbutton" value="Login"/>
+              </div>
+              <div class="col-md-2">
+              </div>
+              <div class="col-md-4">
+              <a href="create/" class="btn btn-primary enterbutton">Sign Up</a>
+              </div>
             </div>
-            <div class="col-md-4">
-              <input type="submit" class="btn btn-primary enterbutton" value="Login"/>
-            </div>
-            <div class="col-md-2">
-            </div>
-            <div class="col-md-4">
-            <a href="create/" class="btn btn-primary enterbutton">Sign Up</a>
-            </div>
-          </div>
         </div>
         <div class="col-md-3">
         </div>

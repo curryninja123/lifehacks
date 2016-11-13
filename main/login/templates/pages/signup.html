@@ -11,29 +11,26 @@
     </div>
   {% endif %}
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-3">
     </div>
-    <div class="col-md-8" align="center">
+    <div class="col-md-6">
       <form action="{% url 'login:new_user' %}" method="post">
         {% csrf_token %}
-        <div class="row">
-          <div class="col-md-6">
-            <label>First Name</label><input type="text" class="form-control" name="first_name" /><br />
-            <label>Username</label><input type="text" class="form-control" name="username" /><br />
-            <label>Email</label><input type="text" class="form-control" name="email" /><br />
-            <label>Hometown</label><input type="text" class="form-control" name="hometown" /><br />
-          </div>
-          <div class="col-md-6">
-            <label>Last Name</label><input type="text" class="form-control" name="last_name" /><br />
-            <label>Password</label><input type="password" class="form-control" name="password" /><br />
-            <label>Confirm Password</label><input type="password" class="form-control" name="password_confirm" /><br />
-            <label>Profile Picture</label><input type="file" class="form-control" name="profile_pic" /><br />
-          </div>
-        </div>
-        <input class="btn btn-primary"type="submit" value="OK"/>
+        <p class="titleblock" id="title">Sign Up</p>
+        <br>
+        <input type="text" class="form-control" name="first_name" placeholder="First Name" /><br />
+        <input type="text" class="form-control" name="username" placeholder="Username" /><br />
+        <input type="text" class="form-control" name="email" placeholder="Email" /><br />
+        <input type="text" class="form-control" name="hometown" placeholder="Hometown" /><br />
+        <input type="text" class="form-control" name="last_name" placeholder="Last Name" /><br />
+        <input type="password" class="form-control" name="password" placeholder="Password" /><br />
+        <input type="password" class="form-control" name="password_confirm" placeholder="Confirm Password" /><br />
+        <br />
+        <label>Profile Picture</label><input type="file" class="form-control" name="profile_pic" style="width:201px" /><br />
+        <input class="btn btn-primary"type="submit" value="Confirm" />
       </form>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-3">
     </div>
   </div>
 </body>

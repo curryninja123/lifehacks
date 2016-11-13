@@ -1,3 +1,4 @@
+/*UNUSED RIGHT NOW FOR CSS GO TO static/style.css*/
 .titleblock {
   color: #e5e5e5;
   background-color: rgb(83, 59, 231);
@@ -6,4 +7,26 @@
   border-color: rgb(73, 49, 221);
   border-width: medium;
   text-align: center;
+}
+/*.titleblock {
+  color: #f7f7f7;
+  background-color: rgb(83, 59, 231);
+  font-size: 20px;
+  font-weight: bold;
+  border-style: solid;
+  border-color: rgb(73, 49, 221);
+  border-width: medium;
+  text-align: center;
+}*/
+.enterbutton {
+  width: 100px;
+  color: #f7f7f7;
+  background-color: rgb(83, 59, 231);
+}
+.contain {
+  border-style: solid;
+  padding: 50px;
+  padding-top: 20px;
+  border-width: medium;
+  border-color: rgb(83, 59, 231);
 }
