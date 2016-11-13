@@ -7,7 +7,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-8" align = "center">
-			<h2>All Life Hacks</h2>
+			<h2>Life Hacks</h2>
 			{% for hack in hack_list %}
 			<div class="jumbotron hackDisp">
 				<img class = "img img-rounded" src="images/hack/hack{{hack.pk}}.jpg" alt="My image"/>
@@ -33,7 +33,7 @@
 			{% endfor %}
 		</div>
 		<div class="col-md-4" align="center">
-			<h2>All Tips</h2>
+			<h2>Tips</h2>
 			{% for tip in tip_list %}
 				<a href="/hacks/view_tip/{{tip.pk}}/primary/">
 					<div class="tipDisp">
