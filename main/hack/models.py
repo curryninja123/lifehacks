@@ -1,6 +1,9 @@
 from django.db import models
+from django import forms
+from . import imageform
 
 # Create your models here.
+
 class Tip (models.Model):
     title = models.CharField(max_length=50)
     text = models.CharField(max_length=150)
@@ -15,7 +18,8 @@ class Hack(models.Model):
     text = models.TextField(max_length=150)
     latitude = models.DecimalField(max_digits=8, decimal_places=5)
     longitude = models.DecimalField(max_digits=8, decimal_places=5)
-    picture = models.ImageField()
+    picture = models.ImageField(upload_to = 'hack/', default = 'hack/no-img.jpg')
+    publisher = models.CharField(max_length=50)
     rates = 0
     rating = 0
     comments = []

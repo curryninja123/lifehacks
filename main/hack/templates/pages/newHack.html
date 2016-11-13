@@ -2,14 +2,14 @@
 {% block title %}Hack Creator{% endblock %}
 {% block body_block %}
 <div class="container-fluid">
-  <form action="{% url 'hack:post_hack' %}"method="post">
+  <form action="{% url 'hack:post_hack' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <label>Title</label><input type="text" class="form-control" name="title" />
     <label>Text</label><textarea class="form-control" name="text"></textarea>
     <label>Latitude</label><input type="number" class="form-control" name="latitude"/>
     <label>Longitude</label><input type="number" class="form-control" name="longitude"/>
-    <label>Picture</label><input type="file" class="form-control" name="picture" />
-    <input type="submit" value = "Submit"/>
+    <label>Picture</label><input type="file" class="form-control" name="image" />
+    <input type="submit" value="Submit" />
   </form>
 </div>
 {% endblock %}
