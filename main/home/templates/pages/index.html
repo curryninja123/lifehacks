@@ -9,7 +9,7 @@
 		<div class="col-md-8" align = "center">
 			<h2>All Life Hacks</h2>
 			{% for hack in hack_list %}
-			<div class="jumbotron">
+			<div class="jumbotron hackDisp">
 				<img class = "img img-rounded" src="images/hack/hack{{hack.pk}}.jpg" alt="My image"/>
 				<!--to implement with API, distance-->
 				<p2> 2 mi Away </p2>
@@ -29,6 +29,7 @@
 					<tr><a class="btn btn-primary brn-lg" href="#" role="button" id="down">-</a></tr>
 				</div>
 			</div>
+			<br />
 			{% endfor %}
 		</div>
 		<div class="col-md-4" align="center">
