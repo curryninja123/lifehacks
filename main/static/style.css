@@ -30,7 +30,9 @@
 #titlebtn{
   border-width: 0;
   color:black;
-  background-color: white;
+  background-color: transparent;
+  font-size:32px;
+  padding:0;
 }
 /*-------------------------------------------------------------------*/
 /* for login.html */
