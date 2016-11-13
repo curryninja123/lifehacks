@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from django.db import models
-from .forms import *
+import datetime
 # Create your views here.
 def index(request):
     return render(request, 'pages/create.html')
@@ -18,3 +18,18 @@ def new_hack(request):
 
 def new_tip(request):
     return render(request, 'pages/createTip.html')
+
+def create_tip(request):
+    p = request.POST
+    tip = Tip()
+    tip.title = p.get('title', '')
+    tip.longitude = p.get('longitude', 0)
+    tip.latitude = p.get('latitude', 0)
+    tip.text = p.get('text', '')
+    tip.start = p.get('start', datetime.now())
+    tip.end = p.get('end', datetime.now())
+    tip.save()
+    return render()
+
+def create_hack(request):
+    p = request.POST
