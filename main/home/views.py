@@ -5,9 +5,16 @@ from hack.models import *
 
 # Create your views here.
 def index(request):
+    des = []
+    for hack in Hack.objects.all():
+        if len(hack.text) <= 50:
+            des.append(hack.text)
+        else:
+            des.append(hack.text[:47]+'...')
     context = {
         'hack_list': Hack.objects.all(),
         'tip_list': Tip.objects.all(),
+        'hack_des': des,
     }
     return render(request, 'pages/index.html', context)
 

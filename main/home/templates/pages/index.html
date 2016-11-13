@@ -3,7 +3,7 @@
 {% block body_block %}
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-8">
 			<div class="jumbotron">
 				<!--to implement with API, distance-->
 				<p2> 2 mi Away </p2>
@@ -25,18 +25,11 @@
 			</div>
 		</div>
 		<div class="col-md-4">
-			<div class="jumbotron tipDisp">
-				<a class="btn btn-primary brn-lg" id="titlebtn">Tip 2</a>
-				<p>...</p>
-				<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="hackDisp">
-				<a class="btn btn-primary brn-lg" id="titlebtn">Tip 3</a>
-				<p>...</p>
-				<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-			</div>
+			{% for tip in tip_list %}
+				<div class="tipDisp">
+					
+				</div>
+			{%endfor%}
 		</div>
 	</div>
 </div>
