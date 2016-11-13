@@ -25,4 +25,9 @@ def categories(request):
 	return render(request, 'pages/categories.html', {})
 def logout_user(request):
     logout(request)
-    return HttpResponse('You have been usccessfully logged out.')
+    return index(request)
+
+def largest_subsequence(st1, st2):
+    if not st1 or not st2:
+        return 0
+    
