@@ -90,6 +90,7 @@ body {
   background-color: mediumspringgreen;
   height: 35px;
   width: 35px;
+  border-width: 0;
 }
 
 #down{
@@ -98,4 +99,11 @@ body {
   background-color: tomato;
   height: 35px;
   width: 35px;
+  border-width: 0;
+}
+
+#titlebtn{
+  border-width: 0;
+  color:black;
+  background-color: white;
 }
