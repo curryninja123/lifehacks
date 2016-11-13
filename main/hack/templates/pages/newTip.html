@@ -1,14 +1,15 @@
 {% extends 'pages/base.html' %}
-{% block title %}Hack Creator{% endblock %}
+{% block title %}Tip Creator{% endblock %}
 {% block body_block %}
 <div class="container-fluid">
-  <form action="{% url 'hack:new_tip' %}">
+  <form action="{% url 'hack:post_tip' %}" method="post">
+    {% csrf_token %}
     <label>Title</label><input type="text" class="form-control" name="title" />
     <label>Text</label><input type="text" class="form-control" name="text" />
     <label>Latitude</label><input type="number" class="form-control" name="latitude"/>
     <label>Longitude</label><input type="number" class="form-control" name="longitude"/>
-    <label>Start Time</label><input type="datetime" class="form-control" name="start" />
-    <label>End Time</label><input type="datetime" class="form-control" name="end" />
+    <label>Start</label><input type="datetime" class="form-control" name="start" />
+    <label>End</label><input type="datetime" class="form-control" name="end" />
     <input type="submit" value = "Submit"/>
   </form>
 </div>

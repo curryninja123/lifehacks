@@ -1,37 +1,33 @@
 from django.db import models
+
 # Create your models here.
-class Wisdom(models.Model):
+class Tip (models.Model):
     title = models.CharField(max_length=50)
-    longitude = models.DecimalField(max_digits=10,decimal_places=7)
-    latitude = models.DecimalField(max_digits=10,decimal_places=7)
+    text = models.CharField(max_length=150)
+    start = models.DateTimeField(max_length=50)
+    end = models.DateTimeField(max_length=50)
+    latitude = models.DecimalField(max_digits=8, decimal_places=5)
+    longitude = models.DecimalField(max_digits=8, decimal_places=5)
     rates = 0
     rating = 0
+    comments = []
     categories = []
-    """ Include User """
-    comment_list = []
 
-    def __str__ (self):
-        return self.title
-
-    def add_comment(self, comment):
-        self.comment_list.append(comment)
-
-class Tip(Wisdom):
-    text = models.CharField(max_length=150)
-    start = models.DateTimeField(auto_now=True)
-    end = models.DateTimeField(auto_now=True)
-
-class Hack(Wisdom):
-    text = models.TextField()
+class Hack(models.Model):
+    title = models.CharField(max_length=50)
+    text = models.TextField(max_length=150)
+    latitude = models.DecimalField(max_digits=8, decimal_places=5)
+    longitude = models.DecimalField(max_digits=8, decimal_places=5)
     picture = models.ImageField()
+    rates = 0
+    rating = 0
+    comments = []
+    categories = []
 
 class Comment(models.Model):
     text = models.TextField()
-    time = models.DateTimeField(auto_now=True)
+    time = models.CharField(max_length=50)
 
 class Category(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
-
-    def __str__(self):
-        return self.name

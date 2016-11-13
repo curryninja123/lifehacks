@@ -1,35 +1,49 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from .models import *
-from django.db import models
-import datetime
 # Create your views here.
-def index(request):
-    return render(request, 'pages/create.html')
-
-def display(request, wisdom_id):
-    w = Wisdom.objects.get(pk=wisdom_id)
-    context = {
-        'wisdom': w,
-    }
-    return render(request, 'pages/display.html', context)
-
 def new_hack(request):
-    return render(request, 'pages/createHack.html')
+    return render(request, 'pages/newHack.html')
 
 def new_tip(request):
-    return render(request, 'pages/createTip.html')
+    return render(request, 'pages/newTip.html')
 
-def create_tip(request):
+def post_hack(request):
+    p = request.POST
+    hack = Hack()
+    hack.title = p.get('title', '')
+    hack.text = p.get('text', '')
+    hack.longitude = p.get('longitude', 0)
+    hack.latitude = p.get('latitude', 0)
+    hack.picture = p.get('picture', None)
+    hack.save()
+    context = {
+        'success-message': 'You have successfully created the hack ' + hack.title,
+        'hack': hack,
+    }
+    return render(request, 'pages/displayHack.html', context)
+
+def post_tip(request):
     p = request.POST
     tip = Tip()
     tip.title = p.get('title', '')
+    tip.text = p.get('text', '')
+    tip.start = p.get('start', '')
+    tip.end = p.get('end', '')
     tip.longitude = p.get('longitude', 0)
     tip.latitude = p.get('latitude', 0)
-    tip.text = p.get('text', '')
-    tip.start = p.get('start', datetime.now())
-    tip.end = p.get('end', datetime.now())
     tip.save()
-    return render()
+    context = {
+        'success-message': 'You have successfully created the tip '  + tip.title,
+        'tip': tip,
+    }
+    return render(request, 'pages/displayTip.html', context)
 
-def create_hack(request):
-    p = request.POST
+def index(request):
+    return HttpResponse('This is the index')
+
+def display_hack(request, id):
+    return HttpResponse()
+
+def display_tip(request, id):
+    return HttpResponse()
