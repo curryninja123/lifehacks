@@ -1,36 +1,39 @@
 {% extends 'base.html' %}
 {% block title %}Sage{% endblock %}
 {% block body_block %}
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-8">
-			<div class="jumbotron">
-				<!--to implement with API, distance-->
-				<p2> 2 mi Away </p2>
-				<!--the header will be a button that opens to the specific hack-->
-				<br>
-				<a class="btn btn-primary brn-lg" id="titlebtn">Free Laundry!</a>
-				<!-- "posted by" is static, the user who posted the hack is connected to the phrase-->
-				<p>posted by Jeremy Ho</p>
-				<!--image is necessary for post, this is just an example. Scaling should be taken care of in css, double check-->
-				<img src="http://okdpreview.com/dev/harco/wp-content/uploads/2015/07/laundry-equipment.jpg" id="pic">
-				<br></br>
-				<!--text is user input description. Probably 50 character limit... something short-->
-				<p>Easy hack that gets you free drying! Doesn't work on washing though...<p>
-					<!--table is the up and down vote buttons, hopefully there's a life feed next to it where feed = up - down-->
-				<div class="table">
-					<tr><a class="btn btn-primary brn-lg" href="#" role="button" id="up">+</a></tr>
-					<tr><a class="btn btn-primary brn-lg" href="#" role="button" id="down">-</a></tr>
+<div class="overlay" id="overlap">
+	<div class="overlay-content"><img src="http://i.imgur.com/mCfz9NT.jpg"></div>
+</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="jumbotron">
+					<!--to implement with API, distance-->
+					<p2> 2 mi Away </p2>
+					<!--the header will be a button that opens to the specific hack-->
+					<br>
+					<a class="btn btn-primary brn-lg" id="titlebtn">Free Laundry!</a>
+					<!-- "posted by" is static, the user who posted the hack is connected to the phrase-->
+					<p>posted by Jeremy Ho</p>
+					<!--image is necessary for post, this is just an example. Scaling should be taken care of in css, double check-->
+					<img src="http://okdpreview.com/dev/harco/wp-content/uploads/2015/07/laundry-equipment.jpg" id="pic">
+					<br></br>
+					<!--text is user input description. Probably 50 character limit... something short-->
+					<p>Easy hack that gets you free drying! Doesn't work on washing though...<p>
+						<!--table is the up and down vote buttons, hopefully there's a life feed next to it where feed = up - down-->
+					<div class="table">
+						<tr><a class="btn btn-primary brn-lg" href="#" role="button" id="up">+</a></tr>
+						<tr><a class="btn btn-primary brn-lg" href="#" role="button" id="down">-</a></tr>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-md-4">
-			{% for tip in tip_list %}
-				<div class="tipDisp">
-					
-				</div>
-			{%endfor%}
+			<div class="col-md-4">
+				{% for tip in tip_list %}
+					<div class="tipDisp">
+
+					</div>
+				{%endfor%}
+			</div>
 		</div>
 	</div>
-</div>
 {% endblock %}

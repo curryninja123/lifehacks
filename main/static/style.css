@@ -1,4 +1,10 @@
 /* for index.html ---------------------------------------------------*/
+body {
+	font-family: helvetica;
+	font-size: 14px;
+	background-color: #CACECF;
+}
+
 #header{
 	font-size: 32px;
 	line-height: 8px;
@@ -49,6 +55,22 @@
 	color: #fafafa;
 	border-radius: 10px;
 	padding: 10px;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    transition: 0.15s;
+		opacity: 0.95;
+}
+
+.overlay-content {
+    size: 90%;
 }
 /*-------------------------------------------------------------------*/
 /* for login.html */
